@@ -26,7 +26,7 @@ $app->get('/', function() {
 });
 
 // Envie uma resposta 'Olá Mundo!' para a URL '/hello' ou no caso da variável
-// opcional [name]  variable safely escape and return a message with the name
+// opcional [name], de forma segura, escape e retorne a mensgem como nome
 // (exemplo: '/hello/FastSitePHP' mostrará 'Olá FastSitePHP!')
 $app->get('/hello/:name?', function($name = 'Mundo') use ($app) {
     return 'Olá ' . $app->escape($name) . '!';
